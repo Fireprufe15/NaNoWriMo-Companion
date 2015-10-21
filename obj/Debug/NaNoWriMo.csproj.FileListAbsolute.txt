@@ -8,3 +8,13 @@ E:\Development\Visual Studio 2013\Projects\NaNoWriMo\obj\Debug\NaNoWriMo.csproj.
 E:\Development\Visual Studio 2013\Projects\NaNoWriMo\obj\Debug\NaNoWriMo.exe
 E:\Development\Visual Studio 2013\Projects\NaNoWriMo\obj\Debug\NaNoWriMo.pdb
 E:\Development\Visual Studio 2013\Projects\NaNoWriMo\obj\Debug\NaNoWriMo.LoginDialog.resources
+C:\Users\mgand\Documents\C# Projects\NaNoWriMo-Companion\bin\Debug\NaNoWriMo.exe.config
+C:\Users\mgand\Documents\C# Projects\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.exe
+C:\Users\mgand\Documents\C# Projects\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.pdb
+C:\Users\mgand\Documents\C# Projects\NaNoWriMo-Companion\bin\Debug\NaNoWriMo.exe
+C:\Users\mgand\Documents\C# Projects\NaNoWriMo-Companion\bin\Debug\NaNoWriMo.pdb
+C:\Users\mgand\Documents\C# Projects\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.csprojResolveAssemblyReference.cache
+C:\Users\mgand\Documents\C# Projects\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.Form1.resources
+C:\Users\mgand\Documents\C# Projects\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.LoginDialog.resources
+C:\Users\mgand\Documents\C# Projects\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.Properties.Resources.resources
+C:\Users\mgand\Documents\C# Projects\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.csproj.GenerateResource.Cache
