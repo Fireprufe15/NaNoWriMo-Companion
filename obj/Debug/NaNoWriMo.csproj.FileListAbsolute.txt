@@ -1,0 +1,10 @@
+E:\Development\Visual Studio 2013\Projects\NaNoWriMo\bin\Debug\NaNoWriMo.exe.config
+E:\Development\Visual Studio 2013\Projects\NaNoWriMo\bin\Debug\NaNoWriMo.exe
+E:\Development\Visual Studio 2013\Projects\NaNoWriMo\bin\Debug\NaNoWriMo.pdb
+E:\Development\Visual Studio 2013\Projects\NaNoWriMo\obj\Debug\NaNoWriMo.csprojResolveAssemblyReference.cache
+E:\Development\Visual Studio 2013\Projects\NaNoWriMo\obj\Debug\NaNoWriMo.Form1.resources
+E:\Development\Visual Studio 2013\Projects\NaNoWriMo\obj\Debug\NaNoWriMo.Properties.Resources.resources
+E:\Development\Visual Studio 2013\Projects\NaNoWriMo\obj\Debug\NaNoWriMo.csproj.GenerateResource.Cache
+E:\Development\Visual Studio 2013\Projects\NaNoWriMo\obj\Debug\NaNoWriMo.exe
+E:\Development\Visual Studio 2013\Projects\NaNoWriMo\obj\Debug\NaNoWriMo.pdb
+E:\Development\Visual Studio 2013\Projects\NaNoWriMo\obj\Debug\NaNoWriMo.LoginDialog.resources
