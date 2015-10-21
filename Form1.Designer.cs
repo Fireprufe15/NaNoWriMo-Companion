@@ -41,7 +41,7 @@
             this.btnSetWordCount.Name = "btnSetWordCount";
             this.btnSetWordCount.Size = new System.Drawing.Size(134, 23);
             this.btnSetWordCount.TabIndex = 1;
-            this.btnSetWordCount.Text = "Send Word Count";
+            this.btnSetWordCount.Text = "Update Word Count";
             this.btnSetWordCount.UseVisualStyleBackColor = true;
             this.btnSetWordCount.Click += new System.EventHandler(this.btnSetWordCount_Click);
             // 
