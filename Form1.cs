@@ -21,11 +21,18 @@ namespace NaNoWriMo
             userDataManager = new FileManager();
             Login();
             webInterface = new WebManager(loggedInUser.Username, loggedInUser.SecretCode);
+            checkCount();
         }
 
         private void btnSetWordCount_Click(object sender, EventArgs e)
         {
-                     
+            WordCountForm wcDialog = new WordCountForm();
+            wcDialog.ShowDialog();
+            if (wcDialog.DialogResult == DialogResult.OK)
+            {
+                MessageBox.Show("Updated wordcount to "+wcDialog.WordCount.ToString());
+                webInterface.UpdateWordCount(wcDialog.WordCount);
+            }            
         }
 
         public void Login()
@@ -59,6 +66,21 @@ namespace NaNoWriMo
                 userDataManager.removeSaveFile();                
             }
             Environment.Exit(0);
+        }
+
+        private void btnCheckCount_Click(object sender, EventArgs e)
+        {
+            checkCount();
+        }
+
+        private void checkCount()
+        {
+            string response = webInterface.getCurrentWordcount();
+            XMLManager xmlResponse = new XMLManager(response);
+            Dictionary<string, string> responseParsed = xmlResponse.WordCountValues();
+            lblWCNum.Text = responseParsed["user_wordcount"].ToString();
+            System.Drawing.Point point = new Point(this.Width / 2 - lblWCNum.Width / 2, lblWCNum.Location.Y);
+            lblWCNum.Location = point;
         }
     }
 }

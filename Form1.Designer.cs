@@ -33,6 +33,8 @@
             this.btnCheckCount = new System.Windows.Forms.Button();
             this.btnWordCountHistory = new System.Windows.Forms.Button();
             this.btnCheckOtherWordcount = new System.Windows.Forms.Button();
+            this.lblWC = new System.Windows.Forms.Label();
+            this.lblWCNum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSetWordCount
@@ -47,7 +49,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(12, 151);
+            this.btnLogout.Location = new System.Drawing.Point(12, 182);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(75, 23);
             this.btnLogout.TabIndex = 2;
@@ -61,8 +63,9 @@
             this.btnCheckCount.Name = "btnCheckCount";
             this.btnCheckCount.Size = new System.Drawing.Size(134, 23);
             this.btnCheckCount.TabIndex = 3;
-            this.btnCheckCount.Text = "Current Wordcount";
+            this.btnCheckCount.Text = "Refresh Wordcount";
             this.btnCheckCount.UseVisualStyleBackColor = true;
+            this.btnCheckCount.Click += new System.EventHandler(this.btnCheckCount_Click);
             // 
             // btnWordCountHistory
             // 
@@ -82,11 +85,34 @@
             this.btnCheckOtherWordcount.Text = "Other User Wordcount";
             this.btnCheckOtherWordcount.UseVisualStyleBackColor = true;
             // 
+            // lblWC
+            // 
+            this.lblWC.AutoSize = true;
+            this.lblWC.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWC.Location = new System.Drawing.Point(14, 67);
+            this.lblWC.Name = "lblWC";
+            this.lblWC.Size = new System.Drawing.Size(272, 26);
+            this.lblWC.TabIndex = 6;
+            this.lblWC.Text = "CURRENT WORDCOUNT";
+            // 
+            // lblWCNum
+            // 
+            this.lblWCNum.AutoSize = true;
+            this.lblWCNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWCNum.Location = new System.Drawing.Point(12, 93);
+            this.lblWCNum.Name = "lblWCNum";
+            this.lblWCNum.Size = new System.Drawing.Size(70, 76);
+            this.lblWCNum.TabIndex = 7;
+            this.lblWCNum.Text = "0";
+            this.lblWCNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 186);
+            this.ClientSize = new System.Drawing.Size(298, 217);
+            this.Controls.Add(this.lblWCNum);
+            this.Controls.Add(this.lblWC);
             this.Controls.Add(this.btnCheckOtherWordcount);
             this.Controls.Add(this.btnWordCountHistory);
             this.Controls.Add(this.btnCheckCount);
@@ -95,6 +121,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -104,6 +131,8 @@
         private System.Windows.Forms.Button btnCheckCount;
         private System.Windows.Forms.Button btnWordCountHistory;
         private System.Windows.Forms.Button btnCheckOtherWordcount;
+        private System.Windows.Forms.Label lblWC;
+        private System.Windows.Forms.Label lblWCNum;
     }
 }
 

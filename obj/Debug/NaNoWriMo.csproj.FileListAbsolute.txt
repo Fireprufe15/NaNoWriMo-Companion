@@ -18,3 +18,4 @@ C:\Users\mgand\Documents\C# Projects\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.For
 C:\Users\mgand\Documents\C# Projects\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.LoginDialog.resources
 C:\Users\mgand\Documents\C# Projects\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.Properties.Resources.resources
 C:\Users\mgand\Documents\C# Projects\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.csproj.GenerateResource.Cache
+C:\Users\mgand\Documents\C# Projects\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.WordCountForm.resources
