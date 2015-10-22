@@ -29,9 +29,16 @@ namespace NaNoWriMo
             WordCountForm wcDialog = new WordCountForm();
             wcDialog.ShowDialog();
             if (wcDialog.DialogResult == DialogResult.OK)
-            {
-                MessageBox.Show("Updated wordcount to "+wcDialog.WordCount.ToString());
-                webInterface.UpdateWordCount(wcDialog.WordCount);
+            {                
+                if (webInterface.UpdateWordCount(wcDialog.WordCount) != "400")
+                {
+                    MessageBox.Show("Updated wordcount to " + wcDialog.WordCount.ToString());
+                    checkCount();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to communicate with the wordcount overlords.");
+                }
             }            
         }
 
@@ -76,14 +83,21 @@ namespace NaNoWriMo
         private void checkCount()
         {
             string response = webInterface.getCurrentWordcount();
-            XMLManager xmlResponse = new XMLManager(response);
-            Dictionary<string, string> responseParsed = xmlResponse.WordCountValues();
-            lblWCNum.Text = responseParsed["user_wordcount"].ToString();
-            System.Drawing.Point point = new Point(this.Width / 2 - lblWCNum.Width / 2, lblWCNum.Location.Y);
-            lblWCNum.Location = point;
-            lblWordsRemaining.Text = (50000 - int.Parse(responseParsed["user_wordcount"])).ToString();
-            lblRemainingDays.Text = (30 - DateTime.Now.Day).ToString();
-            lblWPD.Text = ((50000 - int.Parse(responseParsed["user_wordcount"])) / (30 - DateTime.Now.Day)).ToString(); ;
+            if (response != "FAIL")
+            {
+                XMLManager xmlResponse = new XMLManager(response);
+                Dictionary<string, string> responseParsed = xmlResponse.WordCountValues();
+                lblWCNum.Text = responseParsed["user_wordcount"].ToString();
+                System.Drawing.Point point = new Point(this.Width / 2 - lblWCNum.Width / 2, lblWCNum.Location.Y);
+                lblWCNum.Location = point;
+                lblWordsRemaining.Text = (50000 - int.Parse(responseParsed["user_wordcount"])).ToString();
+                lblRemainingDays.Text = (30 - DateTime.Now.Day).ToString();
+                lblWPD.Text = ((50000 - int.Parse(responseParsed["user_wordcount"])) / (30 - DateTime.Now.Day)).ToString();
+            }
+            else
+            {
+                MessageBox.Show("Failed to retrieve wordcount data.");
+            }            
         }
     }
 }

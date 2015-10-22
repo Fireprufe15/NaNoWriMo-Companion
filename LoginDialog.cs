@@ -32,14 +32,29 @@ namespace NaNoWriMo
         {
             username = txtUsername.Text;
             secretCode = txtSecret.Text;
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            if (checkValidUser())
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("That username doesn't exist.");
+            }
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private bool checkValidUser()
+        {
+            WebManager wm = new WebManager(username, secretCode);
+            XMLManager xmlUser = new XMLManager(wm.getCurrentWordcount());
+            return xmlUser.CheckErrorReturn();
         }
     }
 }

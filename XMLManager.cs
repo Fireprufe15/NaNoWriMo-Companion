@@ -27,6 +27,11 @@ namespace NaNoWriMo
             return response;
         }
 
+        public bool CheckErrorReturn()
+        {
+            return xmlDoc.FirstChild.NextSibling.FirstChild.Name != "error";
+        }
+
 
     }
 }
