@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NaNoWriMo
 {
-    class user
+    public class user
     {
 
         private string userName;

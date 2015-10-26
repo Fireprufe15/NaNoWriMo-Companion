@@ -99,5 +99,11 @@ namespace NaNoWriMo
                 MessageBox.Show("Failed to retrieve wordcount data.");
             }            
         }
+
+        private void btnCheckOtherWordcount_Click(object sender, EventArgs e)
+        {
+            OtherUserWC otherCountDialog = new OtherUserWC(loggedInUser);
+            otherCountDialog.Show();
+        }
     }
 }
