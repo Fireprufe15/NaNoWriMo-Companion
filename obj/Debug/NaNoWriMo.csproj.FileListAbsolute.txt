@@ -31,3 +31,4 @@ E:\Development\C#\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.Properties.Resources.r
 E:\Development\C#\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.WordCountForm.resources
 E:\Development\C#\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.csproj.GenerateResource.Cache
 E:\Development\C#\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.OtherUserWC.resources
+E:\Development\C#\NaNoWriMo-Companion\obj\Debug\NaNoWriMo.NotNovember.resources

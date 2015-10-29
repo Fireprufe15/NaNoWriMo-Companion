@@ -57,6 +57,12 @@
     <Compile Include="LoginDialog.Designer.cs">
       <DependentUpon>LoginDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="NotNovember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotNovember.Designer.cs">
+      <DependentUpon>NotNovember.cs</DependentUpon>
+    </Compile>
     <Compile Include="OtherUserWC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginDialog.resx">
       <DependentUpon>LoginDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotNovember.resx">
+      <DependentUpon>NotNovember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OtherUserWC.resx">
       <DependentUpon>OtherUserWC.cs</DependentUpon>

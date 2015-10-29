@@ -20,6 +20,16 @@ namespace NaNoWriMo
             InitializeComponent();
             userDataManager = new FileManager();
             Login();
+            if (DateTime.Now.Month < 11)
+            {
+                NotNovember countdownThing = new NotNovember();
+                countdownThing.ShowDialog();
+                if (countdownThing.DialogResult == DialogResult.Cancel)
+                {
+                    Environment.Exit(0);
+                }
+                
+            }
             webInterface = new WebManager(loggedInUser.Username, loggedInUser.SecretCode);
             checkCount();
         }
