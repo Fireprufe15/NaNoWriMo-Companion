@@ -14,7 +14,7 @@ namespace NaNoWriMo
         public string Username
         {
             get { return userName; }
-            set { userName = value; }
+            set { userName = value.ToLower(); }
         }
 
         private string secretCode;

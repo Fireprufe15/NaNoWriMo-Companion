@@ -26,8 +26,7 @@ namespace NaNoWriMo
             Directory.CreateDirectory("config");
             FileStream file = new FileStream(FILENAME, FileMode.OpenOrCreate);
             StreamWriter sw = new StreamWriter(file);
-            sw.WriteLine(username);
-            sw.WriteLine(secretcode);
+            sw.WriteLine(username + "\n" + secretcode);
             sw.Close();
 
         }

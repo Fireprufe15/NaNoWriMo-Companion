@@ -101,8 +101,8 @@ namespace NaNoWriMo
                 System.Drawing.Point point = new Point(this.Width / 2 - lblWCNum.Width / 2, lblWCNum.Location.Y);
                 lblWCNum.Location = point;
                 lblWordsRemaining.Text = (50000 - int.Parse(responseParsed["user_wordcount"])).ToString();
-                lblRemainingDays.Text = (30 - DateTime.Now.Day).ToString();
-                lblWPD.Text = ((50000 - int.Parse(responseParsed["user_wordcount"])) / (30 - DateTime.Now.Day)).ToString();
+                lblRemainingDays.Text = (31 - DateTime.Now.Day).ToString();
+                lblWPD.Text = ((50000 - int.Parse(responseParsed["user_wordcount"])) / (31 - DateTime.Now.Day)).ToString();
             }
             else
             {

@@ -6,6 +6,7 @@ using System.Text;
 using System.Net;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using System.IO;
 
 namespace NaNoWriMo
 {
@@ -44,11 +45,12 @@ namespace NaNoWriMo
             string responseString;
             try
             {
-                byte[] response = WC.UploadValues(WCUPDATEURL, "PUT", data);
+                byte[] response = WC.UploadValues(WCUPDATEURL, WebRequestMethods.Http.Put, data);                
                 responseString = Encoding.UTF8.GetString(response);
             }
-            catch (WebException)
+            catch (WebException e)
             {
+                string resp = new StreamReader(e.Response.GetResponseStream()).ReadToEnd();
                 responseString = "400";
             }
 
@@ -60,6 +62,7 @@ namespace NaNoWriMo
         {
             string requestURL = GETWORDCOUNTURL + userName;
             string responseString;
+            
             try
             {
                 byte[] response = WC.DownloadData(requestURL);
@@ -70,6 +73,7 @@ namespace NaNoWriMo
                 responseString = "FAIL";
             }
 
+            WC.Dispose();
             return responseString;
 
         }
